@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Example schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "field": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "ANNOYED",
+        "HUNGRY",
+        "TIRED",
+        "HAPPY",
+        "DEPRESSED",
+        "FLAT"
+      ]
+    }
+  }
+}

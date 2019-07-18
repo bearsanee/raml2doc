@@ -1,0 +1,39 @@
+#%RAML 1.0
+title: Example Service
+protocols: HTTP
+mediaType: application/json
+baseUri: http://example-service/
+
+/v1:
+  /service_one:
+    post:
+      description: creates something
+      is: [withError: {http : "404", code : "Fluff" }]
+      body: !include example-schema.json
+      responses:
+        200:
+          body: ServiceOneResponse
+    /{id}:
+      uriParameters:
+        id: id of the service owner
+        type: string
+      get:
+        description: get something
+        is: [withError: {http : "404", code : "XXX", desc : "Fluff" },
+             withError: {http : "403", code : "ZZZ", desc : "Mannagg" }]
+        responses:
+          200:
+            body: ServiceOneResponse
+
+traits:
+  withError:
+    responses:
+      <<http>>:
+        description: <<code>> - <<desc>>
+        body:
+          application/json:
+            type: Errors
+
+types:
+  ServiceOneResponse:
+    example: !include example-response.json
