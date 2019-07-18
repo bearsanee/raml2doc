@@ -1,5 +1,5 @@
 # raml2doc
-forked by: [raml2doc](https://github.com/CVarisco/raml2doc)
+forked from: [raml2doc](https://github.com/CVarisco/raml2doc)
 
 ## Autonomous publish procedure
 
