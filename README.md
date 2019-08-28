@@ -9,7 +9,8 @@ Run *publish.sh* passing the relative path to you raml
 
 When docker image creation is completed and image is running it shows you the results on [localhost:5000](http://localhost:5000)
 
-Press CTRL+C (Command+C) to stop the image amd remove it from docker.
+Press CTRL+C (Command+C) to stop the image   
+(the script will remove it from docker)
 
 #### Example:
 Run this example to check if all is configurated well
